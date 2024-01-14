@@ -27,7 +27,19 @@ endif
 # mruby compiler executable (mrbc) (with extension if necessary) 
 MRUBY_COMPILER_BIN = $(MRUBY_COMPILER)$(EXECUTABLEEXTENSION)
 
-defaultall: | generatemruby fixincludes copylib installmrbc
+defaultall: | prepare generatemruby fixincludes copylib installmrbc
+
+# Preparing the location where the mruby compiler executable (mrbc) will be installed
+prepare:
+	@if [ ! -d "$(MRUBY_INSTALL_DIR)" ]; then \
+		if [ -f "$(MRUBY_INSTALL_DIR)" ]; then \
+			echo "Unable to create directory: \"$(MRUBY_INSTALL_DIR)\""; \
+			echo "A file exists at this location. Please move or delete this file."; \
+			exit 1; \
+		else \
+			mkdir -p "$(MRUBY_INSTALL_DIR)"; \
+		fi \
+	fi
 
 # Generate mruby
 generatemruby:
