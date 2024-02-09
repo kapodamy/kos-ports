@@ -24,7 +24,7 @@ TARGET =            libSDL_ttf.a
 #There's no option in the build scripts to copy into a different ports inst/include so 
 # instead I'm abusing the fact that INSTALLED_HDRS and HDR_DIRECTORY aren't mutually exclusive.
 INSTALLED_HDRS =        SDL_ttf.h
-HDR_DIRECTORY =         ../../../SDL/inst/include
+HDR_DIRECTORY =         ../../../include/SDL
 HDR_INSTDIR =           SDL
 
 
