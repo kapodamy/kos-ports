@@ -4,7 +4,7 @@ OBJS += GL/draw.o GL/error.o GL/flush.o GL/fog.o GL/framebuffer.o GL/glu.o
 OBJS += GL/immediate.o GL/lighting.o GL/matrix.o GL/state.o GL/texture.o GL/util.o
 OBJS += GL/alloc/alloc.o version.o GL/platforms/sh4.o
 
-KOS_CFLAGS += -DBACKEND_KOSPVR
+KOS_CFLAGS += -D__DREAMCAST__
 
 GLDC_VERSION=$(shell git describe --abbrev=4 --dirty --always --tags)
 
