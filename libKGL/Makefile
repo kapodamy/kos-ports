@@ -10,8 +10,7 @@ SHORT_DESC =        KallistiGL, deprecated OpenGL (tm) like graphics library for
 DEPENDENCIES =
 
 # What files we need to download, and where from.
-GIT_REPOSITORIES =  git://git.code.sf.net/p/cadcdev/libgl \
-                    https://github.com/KallistiOS/libkgl.git
+GIT_REPOSITORIES =  git@github.com:gyrovorbis/libkgl.git
 
 TARGET =            libKGL.a
 INSTALLED_HDRS =    include/gl.h include/glext.h include/glu.h include/glut.h
