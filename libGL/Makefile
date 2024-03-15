@@ -10,8 +10,7 @@ SHORT_DESC =        GLdc, an OpenGL (tm) like graphics library for KOS
 DEPENDENCIES =
 
 # What files we need to download, and where from.
-GIT_REPOSITORIES =  git://git.code.sf.net/p/cadcdev/libgl \
-                    https://github.com/KallistiOS/libkgl.git
+GIT_REPOSITORY =    https://gitlab.com/simulant/GLdc.git
 
 TARGET =            libGL.a
 INSTALLED_HDRS =    include/GL/gl.h include/GL/glext.h include/GL/glkos.h include/GL/glu.h
