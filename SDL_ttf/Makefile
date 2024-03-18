@@ -6,11 +6,9 @@ MAINTAINER =        Donald Haase
 LICENSE =           zlib License - http://opensource.org/licenses/Zlib
 SHORT_DESC =        SDL TrueType font library
 
-# This port uses the autotools scripts that are included with the distfiles.
-PORT_AUTOTOOLS =    1
-
-# Don't attempt to copy the target library, it will be in the inst dir already.
-NOCOPY_TARGET =     1
+# This port could use autotools, but it tries to build the glfont example which uses
+# functionality currently unsupported by gldc..
+#PORT_AUTOTOOLS =    1
 
 # No dependencies beyond the base system.
 DEPENDENCIES =      SDL libbz2 zlib libpng freetype
@@ -27,14 +25,7 @@ INSTALLED_HDRS =        SDL_ttf.h
 HDR_DIRECTORY =         ../../../include/SDL
 HDR_INSTDIR =           SDL
 
-
-# Autotools setup work.
-CONFIGURE_ARGS =    
-CONFIGURE_DEFS =    SDL_CFLAGS=-I${KOS_PORTS}/include/SDL SDL_LIBS=-lSDL \
-                    FT2_CFLAGS="-I${KOS_PORTS}/include/zlib -I${KOS_PORTS}/include/bzlib \
-                    -I${KOS_PORTS}/include/png -I${KOS_PORTS}/include/freetype2" \
-                    FT2_LIBS="-lfreetype -lz -lbz2 -lpng -lm"
-MAKE_TARGET =       all install
-
+#KOS Distributed extras (to be copied into the build tree)
+KOS_DISTFILES =     KOSMakefile.mk
 
 include ${KOS_PORTS}/scripts/kos-ports.mk
