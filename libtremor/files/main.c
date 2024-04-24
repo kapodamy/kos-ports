@@ -1,4 +1,5 @@
 #include <kos.h>
+#include "sndoggvorbis.h"
 
 static kthread_t * thd = NULL;
 
