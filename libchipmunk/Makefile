@@ -1,5 +1,5 @@
 # Port Metadata
-PORTNAME =          chipmunk
+PORTNAME =          libchipmunk
 PORTVERSION =       7.0.3.1
 
 MAINTAINER =        Donald Haase
