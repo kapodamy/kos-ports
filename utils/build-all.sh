@@ -38,3 +38,4 @@ if [ -n "$errors" ]; then
     echo "$error_count error(s) occurred during the build process:"
     echo "$errors"
 fi
+return $error_count
