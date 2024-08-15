@@ -9,7 +9,7 @@ SHORT_DESC =        Library for decoding ADX audio files
 KOS_MAKEFILE =      Makefile
 
 # What files we need to download, and where from.
-GIT_REPOSITORY =    https://github.com/sega-dreamcast/libADX.git
+GIT_REPOSITORY =    https://github.com/sega-dreamcast/libadx.git
 TARGET =            libADX.a
 INSTALLED_HDRS =    include/adx.h include/snddrv.h
 HDR_INSTDIR =       adx
