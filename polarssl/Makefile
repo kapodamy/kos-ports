@@ -15,17 +15,13 @@ DOWNLOAD_FILES =    polarssl-1.3.9-gpl.tgz
 
 TARGET =            libpolarssl.a
 
-# This is required because the built-in cmake doesn't support custom install
-# of headers. It does support custom installation of the lib itself via
-# -DINSTALL_STATIC=ON and -DLIB_INSTALL_DIR=${KOS_PORTS}/${PORTNAME}/inst/lib
-# But that forces the attempt to install the headers locally.
+# Library headers
 HDR_DIRECTORY =     include/polarssl
 
-# If the header installation issue above is fixed then install_static can be changed
-# Build_demos is reliant on a built-in library sokol that doesn't have a DC port
+# Set cmake build settings
 CMAKE_ARGS =        -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTING=FALSE -DENABLE_PROGRAMS=FALSE
 
-# Add a pre-build target to adjust the source code
+# Minor adjustments before building the source code
 PREBUILD = polarssl_prebuild
 polarssl_prebuild:
 	sed -i '84s/.*/defined(_arch_dreamcast)/' build/${PORTNAME}-${PORTVERSION}/library/net.c
