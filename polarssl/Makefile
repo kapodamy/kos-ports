@@ -24,8 +24,8 @@ CMAKE_ARGS =        -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTING=FALSE -DENABLE_P
 # Minor adjustments before building the source code
 PREBUILD = polarssl_prebuild
 polarssl_prebuild:
-	sed -i '84s/.*/defined(_arch_dreamcast)/' build/${PORTNAME}-${PORTVERSION}/library/net.c
-	sed -i '28s/.*/set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-error=incompatible-pointer-types")/' build/${PORTNAME}-${PORTVERSION}/CMakeLists.txt
+	cd "build/${PORTNAME}-${PORTVERSION}" && \
+	patch -p1 < ../../files/${PORTNAME}-${PORTVERSION}.patch || { exit 1; }
 
 # Add a pre-install target to get the built library where we expect it.
 # This, copied from opus, might be solvable by
