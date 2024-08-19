@@ -6,7 +6,7 @@ MAINTAINER =        Damian Parrino <bucanero@users.noreply.github.com>
 LICENSE =           GPL2
 SHORT_DESC =        A Secure Socket Layer library.
 
-# This port uses the autotools scripts that are included with the distfiles.
+# This port uses CMake
 PORT_BUILD =        cmake
 
 # What files we need to download, and where from.
