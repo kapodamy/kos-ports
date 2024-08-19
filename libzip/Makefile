@@ -6,7 +6,7 @@ MAINTAINER =        Damian Parrino <bucanero@users.noreply.github.com>
 LICENSE =           3-clause BSD license
 SHORT_DESC =        libzip is a C library for reading, creating, and modifying zip archives.
 
-# This port uses the autotools scripts that are included with the distfiles.
+# This port uses CMake.
 PORT_BUILD =        cmake
 
 # This port requires zlib
