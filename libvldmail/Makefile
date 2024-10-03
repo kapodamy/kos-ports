@@ -4,7 +4,7 @@ PORTVERSION =       1.0.0
 
 MAINTAINER =        Donald Haase
 LICENSE =           MIT-0
-SHORT_DESC =        An e-mail address validation libarary.
+SHORT_DESC =        An e-mail address validation library.
 
 # This port uses the autotools scripts that are included with the distfiles.
 PORT_BUILD =        cmake
